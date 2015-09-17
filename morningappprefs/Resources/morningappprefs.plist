@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>defaults</key>
+			<string>com.cfarzaneh.morningappprefs</string>
+			<key>key</key>
+			<string>killswitch</string>
+			<key>label</key>
+			<string>Enabled</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>bundle</key>
+			<string>AppList</string>
+			<key>isController</key>
+			<string>1</string>
+			<key>label</key>
+			<string>Application to Open</string>
+			<key>key</key>
+			<string>App</string>
+			<key>ALSettingsKey</key>
+			<string>App</string>
+			<key>ALAllowsSelection</key>
+			<string>1</string>
+			<key>ALSettingsPath</key>
+			<string>/var/mobile/Library/Preferences/com.cfarzaneh.morningappprefs.plist</string>
+			<key>ALSingleEnabledMode</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Advanced Customization</string>
+			<key>footerText</key>
+			<string>MorningApp will only activate after first unlock after wake time. Wake Time must be in military time e.g 15:21:00</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>defaults</key>
+			<string>com.cfarzaneh.morningappprefs</string>
+			<key>key</key>
+			<string>waketimestring</string>
+			<key>label</key>
+			<string>Wake Time</string>
+			<key>placeholder</key>
+			<string>06:15:00</string>
+			<key>PostNotification</key>
+			<string>com.cfarzaneh.morningapp.settingsupdated</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>© 2015 Cameron Farzaneh</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>installPrefsDonate:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Donate</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>openTwitterLink:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Twitter @persian_cam</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>resetMorningPrefs:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Reset Preferences</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>MorningApp</string>
+</dict>
+</plist>

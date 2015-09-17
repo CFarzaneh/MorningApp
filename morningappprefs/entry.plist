@@ -1,0 +1,10 @@
+{
+	entry = {
+		bundle = morningappprefs;
+		cell = PSLinkCell;
+		detail = "morningappprefsListController";
+		icon = "morningappprefs.png";
+		isController = 1;
+		label = MorningApp;
+	};
+}

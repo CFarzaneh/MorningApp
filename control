@@ -1,0 +1,9 @@
+Package: com.cfarzaneh.morningapp
+Name: MorningApp
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Activate an app on first unlock of every morning!
+Maintainer: CFarzaneh
+Author: CFarzaneh
+Section: Tweaks
