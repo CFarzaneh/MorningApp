@@ -13,6 +13,7 @@
 @end
 
 @interface SBUIController : NSObject
+-(void)activateApplication:(id)arg1;
 -(void)activateApplicationAnimated:(id)arg1;
 @end
 
@@ -111,8 +112,20 @@ static void morningAppDoOpenApp() {
             loadMorningAppPrefs();
             if (enabled) {
                     if (morningAppCanOpenApp()) {
+
+                    	NSString *version = [UIDevice currentDevice].systemVersion;
+   						 if (version.intValue >= 9.0) {
+
+							SBApplication *app = [(SBApplicationController *) [objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:appToOpen];
+							[(SBUIController *) [objc_getClass("SBUIController") sharedInstance] activateApplication:app];
+
+    					} else {
+
                             SBApplication *app = [[%c(SBApplicationController) sharedInstance] applicationWithDisplayIdentifier:appToOpen];
                             [[%c(SBUIController) sharedInstance] activateApplicationAnimated:app];
+        
+    				}
+                    	    
             
                     }
             }
